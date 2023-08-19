@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Clipboard Manager",
+    "version": "1.0",
+    "permissions": ["storage"],
+    "action": {
+        "default_popup" : "index.html",
+        "default_icon" : "Icon.png",
+        "default_title" : "Botnen - MultiClip"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["images/*"],
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  
